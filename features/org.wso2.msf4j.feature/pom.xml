@@ -65,7 +65,11 @@
             <artifactId>guava</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.swagger</groupId>
+            <groupId>com.google.guava</groupId>
+            <artifactId>failureaccess</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.orbit.io.swagger.core</groupId>
             <artifactId>swagger-core</artifactId>
             <exclusions>
                 <exclusion>
@@ -79,7 +83,7 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>io.swagger</groupId>
+            <groupId>org.wso2.orbit.io.swagger.jaxrs</groupId>
             <artifactId>swagger-jaxrs</artifactId>
             <exclusions>
                 <exclusion>
@@ -96,16 +100,16 @@
             <groupId>io.swagger</groupId>
             <artifactId>swagger-annotations</artifactId>
         </dependency>
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-models</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.fasterxml.jackson.core</groupId>
-                    <artifactId>jackson-annotations</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--        <dependency>--> <!-- TODO REVISE -->
+<!--            <groupId>io.swagger</groupId>-->
+<!--            <artifactId>swagger-models</artifactId>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--                    <artifactId>jackson-annotations</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -263,7 +267,11 @@
                                 </bundle>
                                 <bundle>
                                     <symbolicName>com.google.guava</symbolicName>
-                                    <version>${guava.version}.0</version>
+                                    <version>${guava.bundle.version}</version>
+                                </bundle>
+                                <bundle>
+                                    <symbolicName>com.google.guava.failureaccess</symbolicName>
+                                    <version>${guava.failureaccess.version}</version>
                                 </bundle>
                                 <bundle>
                                     <symbolicName>javax.ws.rs-api</symbolicName>
@@ -278,21 +286,21 @@
                                     <version>${beanutils.osgi.version}</version>
                                 </bundle>
                                 <bundle>
-                                    <symbolicName>io.swagger.core</symbolicName>
-                                    <version>${io.swagger.version}</version>
+                                    <symbolicName>swagger-core</symbolicName>
+                                    <version>${io.swagger.core.version}</version>
                                 </bundle>
                                 <bundle>
                                     <symbolicName>io.swagger.annotations</symbolicName>
                                     <version>${io.swagger.version}</version>
                                 </bundle>
                                 <bundle>
-                                    <symbolicName>io.swagger.jaxrs</symbolicName>
-                                    <version>${io.swagger.version}</version>
+                                    <symbolicName>swagger-jaxrs</symbolicName>
+                                    <version>${io.swagger.jaxrs.version}</version>
                                 </bundle>
-                                <bundle>
-                                    <symbolicName>io.swagger.models</symbolicName>
-                                    <version>${io.swagger.version}</version>
-                                </bundle>
+<!--                                <bundle>--> <!-- TODO REVISE -->
+<!--                                    <symbolicName>io.swagger.models</symbolicName>-->
+<!--                                    <version>${io.swagger.version}</version>-->
+<!--                                </bundle>-->
                                 <bundle>
                                     <symbolicName>com.fasterxml.jackson.core.jackson-databind</symbolicName>
                                     <version>${com.fasterxml.jackson.databind.version}</version>

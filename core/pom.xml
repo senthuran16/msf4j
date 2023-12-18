@@ -60,7 +60,11 @@
                     <artifactId>org.wso2.carbon.messaging</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.wso2.orbit.org.yaml</groupId>
+                    <groupId>org.wso2.orbit.org.yaml</groupId> <!-- TODO check -->
+                    <artifactId>snakeyaml</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.yaml</groupId>
                     <artifactId>snakeyaml</artifactId>
                 </exclusion>
             </exclusions>
@@ -349,7 +353,9 @@
         <export.package>
             !org.wso2.msf4j.internal.*,
             !org.wso2.msf4j.delegates.*,
-            org.wso2.msf4j.*;version="${msf4j.version}"
+            org.wso2.msf4j;version="${msf4j.version}",
+            org.wso2.msf4j.*;version="${msf4j.version}",
+            org.yaml.snakeyaml.*;version="${org.snakeyaml.version}"
         </export.package>
         <import.package>
             org.wso2.msf4j.delegates.*;version="${msf4j.version.range}",

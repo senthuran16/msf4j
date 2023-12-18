@@ -40,7 +40,8 @@
             <artifactId>javax.ws.rs-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.swagger</groupId>
+<!--            <groupId>io.swagger</groupId>-->
+            <groupId>org.wso2.orbit.io.swagger.core</groupId>  <!-- TODO Check -->
             <artifactId>swagger-core</artifactId>
             <exclusions>
                 <exclusion>
@@ -70,7 +71,8 @@
             <artifactId>jackson-dataformat-yaml</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.swagger</groupId>
+            <groupId>org.wso2.orbit.io.swagger.jaxrs</groupId>  <!-- TODO Check -->
+<!--            <groupId>io.swagger</groupId>-->
             <artifactId>swagger-jaxrs</artifactId>
             <exclusions>
                 <exclusion>
